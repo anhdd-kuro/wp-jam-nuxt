@@ -1,0 +1,18 @@
+// =================== FLex List - Card Layout ==================
+@mixin flex-list($item-per-line: 3, $item-width: 30%, $margin-top: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    box-sizing: border-box;
+    width: $item-width;
+
+    &:not(:nth-child(-n + #{$item-per-line})) {
+      margin-top: $margin-top;
+    }
+
+    &:not(:nth-child(#{$item-per-line}n)) {
+      margin-right: #{(100% - $item-width * $item-per-line) / ($item-per-line - 1)};
+    }
+  }
+}

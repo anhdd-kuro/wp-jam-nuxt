@@ -1,0 +1,494 @@
+@mixin t-hover-special($bg_color: black, $txt_color: white) {
+  $btn-color: $bg_color;
+  $btn-color-dark: mix(black, $btn-color, 40%);
+  $btn-color-light: mix(white, $btn-color, 20%);
+
+  position: relative;
+  overflow: hidden;
+  color: $txt_color;
+
+  & > *:not(.animation-bg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .animation-bg {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    border-radius: 50%;
+    background-color: $btn-color-light;
+  }
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+@keyframes move_truck_wheel {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
+@keyframes move_truck_main {
+  0% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes move_truck_smoke {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translate(6px, -6px);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate(6px, -8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(6px, -8px);
+    opacity: 0;
+  }
+}
+@include media-sp {
+  @keyframes drive_truck {
+    0% {
+      right: -5%;
+      bottom: 38%;
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      right: 100%;
+      bottom: 38%;
+      opacity: 0;
+    }
+  }
+}
+
+@include media-pc {
+  @keyframes drive_truck {
+    0% {
+      right: -5%;
+      bottom: 38%;
+      transform: rotate(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    50% {
+      right: 50%;
+      bottom: 38%;
+      transform: rotate(0);
+      opacity: 1;
+    }
+
+    60% {
+      right: 60%;
+      bottom: 38%;
+      transform: rotate(-6deg);
+      opacity: 1;
+    }
+
+    75% {
+      right: 75%;
+      bottom: 24%;
+      transform: rotate(-12deg);
+      opacity: 1;
+    }
+
+    80% {
+      right: 80%;
+      bottom: 14%;
+      transform: rotate(-14deg);
+      opacity: 1;
+    }
+
+    85% {
+      right: 85%;
+      bottom: 4%;
+      transform: rotate(-16deg);
+      opacity: 1;
+    }
+
+    95% {
+      right: 95%;
+      bottom: -15%;
+      transform: rotate(-18deg);
+      opacity: 1;
+    }
+
+    100% {
+      right: 100%;
+      bottom: -20%;
+      transform: rotate(-20deg);
+      opacity: 0;
+    }
+  }
+}
+
+@include media-sp {
+  @for $i from 1 through 5 {
+    @keyframes move_vegetable_#{$i} {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 18) * 1%} {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 30) * 1%} {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+
+      90% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include media-pc {
+  @for $i from 1 through 5 {
+    @keyframes move_vegetable_#{$i} {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 12) * 1%} {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 18) * 1%} {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+
+      90% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+@include media-sp {
+  @for $i from 6 through 10 {
+    @keyframes move_vegetable_#{$i} {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 36) * 1%} {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 50) * 1%} {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+
+      90% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include media-pc {
+  @for $i from 6 through 10 {
+    @keyframes move_vegetable_#{$i} {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 24) * 1%} {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #{($i * 2 + 30) * 1%} {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+
+      90% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.t-ft-animation {
+  &__truck {
+    animation: drive_truck 10s infinite linear;
+  }
+
+  &__main {
+    animation: move_truck_main 1s infinite linear;
+  }
+
+  &__wheel {
+    animation: move_truck_wheel 2s infinite linear;
+  }
+
+  &__smoke {
+    animation: move_truck_smoke 1.5s infinite;
+  }
+}
+@for $i from 1 through 10 {
+  .t-ft-animation__vegetable--0#{$i} {
+    animation: move_vegetable_#{$i} 10s infinite;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes rotate_sun {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale_sun {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include media-sp {
+  @keyframes fade_veg_in_01 {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade_veg_in_02 {
+    0% {
+      opacity: 0;
+    }
+
+    30% {
+      opacity: 0;
+    }
+
+    35% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade_veg_in_03 {
+    0% {
+      opacity: 0;
+    }
+
+    45% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade_veg_in_04 {
+    0% {
+      opacity: 0;
+    }
+
+    55% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@include media-pc {
+  @keyframes fade_veg_in_01 {
+    0% {
+      opacity: 0;
+    }
+
+    14% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade_veg_in_02 {
+    0% {
+      opacity: 0;
+    }
+
+    24% {
+      opacity: 0;
+    }
+
+    28% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade_veg_in_03 {
+    0% {
+      opacity: 0;
+    }
+
+    35% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade_veg_in_04 {
+    0% {
+      opacity: 0;
+    }
+
+    45% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .t-ft-animation__get--0#{$i} {
+    animation: fade_veg_in_0#{$i} 10s infinite linear;
+    animation-fill-mode: both;
+  }
+}

@@ -1,0 +1,40 @@
+// Settings
+@import 'settings/colors';
+@import 'settings/global';
+
+// Tools
+@import 'tools/font';
+@import 'tools/helper';
+@import 'tools/icon';
+@import 'tools/responsive';
+@import 'tools/animation';
+
+// Generic
+@import 'generic/normalize';
+
+// Elements
+@import 'elements/index';
+
+html {
+  font-size: #{(10/$sp-size * 100)}vw;
+
+  @include media-pc {
+    font-size: #{(10/$pc-max * 100)}vw;
+  }
+
+  @include media-min(#{$pc-max}px) {
+    font-size: 62.5%;
+  }
+}
+
+@include media-pc {
+  .only-sp {
+    display: none !important;
+  }
+}
+
+@include media-sp {
+  .only-pc {
+    display: none !important;
+  }
+}
