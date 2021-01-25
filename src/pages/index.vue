@@ -20,7 +20,7 @@ import setMeta from "@/meta";
 import { TagsKey } from "@/helper/provider";
 import { usePosts } from "@/compositions/posts";
 import { useMediaPosts } from "@/compositions/mediaPosts";
-import { useTopPost } from "./compositions/useTopPost";
+import { useTopPost } from "./_compositions/useTopPost";
 
 export default defineComponent({
   components: {
