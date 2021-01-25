@@ -1,0 +1,31 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.validate": [
+      "javascript",
+      "typescript",
+      "vue",
+  ],
+  "emmet.includeLanguages": {
+    "pug": "jade",
+  },
+  "[vue]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "vuejsAutoImport.hasTrailingComma": true,
+  "vuejsAutoImport.insertOneComponentPerLine": true,
+  "vuejsAutoImport.rootDirectory": "src",
+  "stylelint.validate": [
+      "javascript",
+      "sass",
+      "scss",
+      "typescript",
+      "vue",
+      "vue-html",
+      "vue-postcss",
+  ],
+}

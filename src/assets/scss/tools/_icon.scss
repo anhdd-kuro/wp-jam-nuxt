@@ -1,0 +1,58 @@
+// ====================== Icon CSS  ======================
+// Arrow
+@mixin icon-arrs-style($border-size: 3px, $width: 4px, $color: #000) {
+  display: inline-block;
+  position: relative;
+  padding: $width;
+  border: solid $color;
+  border-width: 0 $border-size $border-size 0;
+}
+
+@mixin icon-arr($size: 3px, $width: 4px, $color: #000, $direction: 'right') {
+  display: inline-block;
+  position: relative;
+  padding: $width;
+  border: solid $color;
+  border-width: 0 $size $size 0;
+
+  @if ($direction== 'right') {
+    transform: rotate(-45deg);
+  } @else if ($direction== 'left') {
+    transform: rotate(135deg);
+  } @else if ($direction== 'up') {
+    transform: rotate(-135deg);
+  } @else if ($direction== 'down') {
+    transform: rotate(45deg);
+  }
+}
+// Close
+@mixin icon-close($width: 15px, $height: 1px, $color: #000) {
+  display: block;
+  position: relative;
+  width: $width;
+  height: $width;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+    margin: auto;
+    background-color: $color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+  @content;
+}
