@@ -60,9 +60,12 @@ export default {
   build: {},
 
   env: {
-    server: process.env.SERVER || "http://localhost:81/recruit.oisixradaichi",
+    // server: process.env.SERVER || "http://localhost:81/recruit.oisixradaichi",
+    // staticServer:
+    //   process.env.STATIC_SERVER ||
+    //   "http://localhost:3000/recruit.oisixradaichi",
+    server: process.env.SERVER || "https://recruit.oisixradaichi.co.jp/",
     staticServer:
-      process.env.STATIC_SERVER ||
-      "http://localhost:3000/recruit.oisixradaichi",
+      process.env.STATIC_SERVER || "https://recruit.oisixradaichi.co.jp/",
   },
 };
