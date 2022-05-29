@@ -16,6 +16,6 @@ jobs:
       - name: install dependencies
         run: yarn install --frozen-lockfile # optional, --immutable
       - name: test project
-        run: yarn test
+        run: yarn test --passWithNoTests
       - name: build project
         run: yarn build
