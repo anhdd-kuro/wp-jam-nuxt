@@ -1,0 +1,17 @@
+name: wp_theme
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  check_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: install packages
+        run: yarn
+      - name: test project
+        run: yarn test
+      - name: build project
+        run: yarn build
