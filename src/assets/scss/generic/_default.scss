@@ -1,0 +1,25 @@
+@use "sass:math";
+
+html {
+  font-size: #{(math.div(10, $sp-size) * 100)}vw;
+
+  @include media-pc {
+    font-size: #{(math.div(10, $pc-max) * 100)}vw;
+  }
+
+  @include media-min(#{$pc-max}px) {
+    font-size: 62.5%;
+  }
+}
+
+@include media-pc {
+  .only-sp {
+    display: none !important;
+  }
+}
+
+@include media-sp {
+  .only-pc {
+    display: none !important;
+  }
+}
