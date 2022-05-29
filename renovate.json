@@ -1,5 +1,14 @@
 {
   "extends": [
     "config:base"
+  ],
+  "rangeStrategy": "pin",
+  "timezone": "Asia/Tokyo",
+  "branchPrefix": "package-update/",
+  "schedule": [
+    "every weekend"
+  ],
+  "labels": [
+    "package更新"
   ]
 }
