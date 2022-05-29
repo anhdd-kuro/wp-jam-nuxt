@@ -13,6 +13,7 @@ import {
   inject,
   useFetch,
 } from "@nuxtjs/composition-api";
+import { useTopPost } from "./_compositions/useTopPost";
 import Posts from "@/partials/Home/Posts/index.vue";
 import MediaPosts from "@/partials/Home/MediaPosts/index.vue";
 import TopPost from "@/partials/Home/TopPost/index.vue";
@@ -20,7 +21,6 @@ import setMeta from "@/meta";
 import { TagsKey } from "@/helper/provider";
 import { usePosts } from "@/compositions/posts";
 import { useMediaPosts } from "@/compositions/mediaPosts";
-import { useTopPost } from "./_compositions/useTopPost";
 
 export default defineComponent({
   components: {

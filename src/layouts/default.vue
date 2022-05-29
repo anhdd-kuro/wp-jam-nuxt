@@ -8,10 +8,10 @@
 
 <script>
 import { defineComponent, provide } from "@nuxtjs/composition-api";
-import { useTags } from "@/compositions/tags";
-import { TagsKey } from "@/helper/provider";
 import Header from "./modules/header.vue";
 import Footer from "./modules/footer/index.vue";
+import { useTags } from "@/compositions/tags";
+import { TagsKey } from "@/helper/provider";
 
 export default defineComponent({
   components: {

@@ -125,10 +125,10 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api";
-import TagComponent from "@/components/Tag/index.vue";
-import { Tag } from "@/types/tag";
 import Nav from "../components/nav.vue";
 import Farm from "./components/farm.vue";
+import TagComponent from "@/components/Tag/index.vue";
+import { Tag } from "@/types/tag";
 
 export default defineComponent({
   components: {

@@ -1,4 +1,6 @@
 // =================== FLex List - Card Layout ==================
+@use "sass:math";
+
 @mixin flex-list($item-per-line: 3, $item-width: 30%, $margin-top: 30px) {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +14,7 @@
     }
 
     &:not(:nth-child(#{$item-per-line}n)) {
-      margin-right: #{(100% - $item-width * $item-per-line) / ($item-per-line - 1)};
+      margin-right: #{math.div(100% - $item-width * $item-per-line, $item-per-line - 1)};
     }
   }
 }
