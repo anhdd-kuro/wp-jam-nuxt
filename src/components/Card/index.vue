@@ -2,7 +2,7 @@
   <div class="card">
     <a href="" class="card__overlay" target="_blank">
       <div class="card__img">
-        <img :src="post.image.full.source_url" alt="" />
+        <img v-if="post.image.full" :src="post.image.full.source_url" alt="" />
       </div>
       <Category :category="post.category" class="card__category" />
       <div class="card__txt">

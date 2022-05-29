@@ -7,7 +7,11 @@
         target="_blank"
       >
         <div class="article-top__img">
-          <img :src="post.image.full.source_url" alt="ポスト画像" />
+          <img
+            v-if="post.image.full"
+            :src="post.image.full.source_url"
+            alt="ポスト画像"
+          />
         </div>
         <Category class="article-top__type" :category="post.category" />
         <div class="article-top__txt">
