@@ -5,7 +5,11 @@
       <li v-for="post in posts" :key="post.id" class="media__item">
         <NuxtLink to="" target="_blank">
           <div class="media__img">
-            <img :src="post.image.full.source_url" alt="" />
+            <img
+              v-if="post.image.full"
+              :src="post.image.full.source_url"
+              alt=""
+            />
           </div>
           <div class="media__txt">
             <p class="media__date font-montserrat">
