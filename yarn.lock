@@ -1657,13 +1657,13 @@
     ts-loader "^8.0.17"
     typescript "~4.2"
 
-"@nuxt/typescript-runtime@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-2.0.1.tgz#a04c56caa980ef26fb214cfa9fc8a5de6133ba46"
-  integrity sha512-7yDI9v56E3P3D8oTEv2iprIbh5rTSBeC53lpiPfTgWq57X3ZE0U3EMbmeBezr8y1/kXO59HxSuNNlyzAvwyugg==
+"@nuxt/typescript-runtime@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-2.1.0.tgz#8838bc929519f44ac40d8d2331aeb095a05965a5"
+  integrity sha512-quzxXiWq+jGdnCedDIYuBiExrfIJL3VL9o4gJyq6QzthKLYSvLzB6w4RiH6UbLtnNJyDoO9ywyNSI2+RUJr/Ng==
   dependencies:
     ts-node "^9.1.1"
-    typescript "~4.1"
+    typescript "~4.2"
 
 "@nuxt/utils@2.15.8":
   version "2.15.8"
@@ -10630,6 +10630,17 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
+sass-loader@10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.1.1.tgz#4ddd5a3d7638e7949065dd6e9c7c04037f7e663d"
+  integrity sha512-W6gVDXAd5hR/WHsPicvZdjAWHBcEJ44UahgxcIE196fW2ong0ZHMPO1kZuI5q0VlvMQZh32gpv69PLWQm70qrw==
+  dependencies:
+    klona "^2.0.4"
+    loader-utils "^2.0.0"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    semver "^7.3.2"
+
 sass-loader@10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.2.1.tgz#17e51df313f1a7a203889ce8ff91be362651276e"
@@ -11951,11 +11962,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typescript@~4.1:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.6.tgz#1becd85d77567c3c741172339e93ce2e69932138"
-  integrity sha512-pxnwLxeb/Z5SP80JDRzVjh58KsM6jZHRAOtTpS7sXLS4ogXNKC9ANxHHZqLLeVHZN35jCtI4JdmLLbLiC1kBow==
 
 typescript@~4.2:
   version "4.2.4"
